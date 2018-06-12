@@ -23,6 +23,15 @@ module.exports = (app, templatePath, callback) => {
 		}
 	}
 
+	/**
+	 * Client
+	 */
+	clientConfig.entry.app = ['webpack-hot-middleware/client', clientConfig.entry.app]
+	clientConfig.output.filename = '[name].js'
+	clientConfig.plugins.push(
+		new webpack.HotModuleReplacementPlugin()
+	)
+
 	const clientCompiler = webpack(clientConfig)
 	const devMiddleware = middleware(clientCompiler, {
 		publicPath: clientConfig.output.publicPath
@@ -39,6 +48,11 @@ module.exports = (app, templatePath, callback) => {
 		update()
 	})
 
+	app.use(require('webpack-hot-middleware')(clientCompiler, { heartbeat:5000 }))
+
+	/**
+	 * Server
+	 */
 	const mfs = new memoryFs()
 	const serverCompiler = webpack(serverConfig)
 
