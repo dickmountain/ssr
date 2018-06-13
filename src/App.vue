@@ -1,15 +1,13 @@
 <template>
   <div id="app">
-    <counter></counter>
+	<router-link :to="{ path: '/' }">Home</router-link>
+	<router-link :to="{ path: '/about' }">About</router-link>
+	<router-view></router-view>
   </div>
 </template>
 
 <script>
-	import Counter from './components/Counter'
-
   export default {
-    components: {
-    	Counter
-    }
+
   }
 </script>
