@@ -1,11 +1,10 @@
-import Vue from 'vue'
-import App from './App.vue'
+import { createApp } from './app'
 
 export default context => {
-	return Promise.resolve(
-		new Vue({
-			render: h => h(App)
-		})
-	)
+	return new Promise((resolve, reject) => {
+		const { app } = createApp()
+
+		resolve(app)
+	})
 }
 
