@@ -17,7 +17,8 @@
     "hoek": "^5.0.3",
     "vue": "^2.4.4",
     "vue-router": "^3.0.1",
-    "vue-server-renderer": "^2.5.16"
+    "vue-server-renderer": "^2.5.16",
+    "vuex": "^3.0.1"
   },
   "browserslist": [
     "> 1%",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-3": "^6.24.1",
     "cross-env": "^5.0.5",

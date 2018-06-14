@@ -1,9 +1,27 @@
 <template>
-	<p>Home</p>
+	<div>
+		<div class="counter">
+			{{ number }}
+		</div>
+
+		<a href="#" @click.prevent="increment">Increçment</a>
+	</div>
 </template>
 
 <script>
+	import { mapGetters, mapMutations } from 'vuex'
+
 	export default {
+		computed: {
+			...mapGetters([
+				'number'
+			])
+		},
+		methods:{
+			...mapMutations([
+				'increment'
+			])
+		},
 		title () {
 			return 'Home'
 		}
