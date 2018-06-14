@@ -4,7 +4,7 @@
 			{{ number }}
 		</div>
 
-		<a href="#" @click.prevent="increment">Increçment</a>
+		<a href="#" @click.prevent="increment">Increment</a>
 	</div>
 </template>
 
