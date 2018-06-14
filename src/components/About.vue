@@ -4,6 +4,8 @@
 
 <script>
 	export default {
-		
+		title () {
+			return 'About'
+		}
 	}
 </script>

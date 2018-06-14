@@ -17,6 +17,9 @@
 			increment () {
 				this.number++
 			}
+		},
+		title () {
+			return 'Counter'
 		}
 	}
 </script>
