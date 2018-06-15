@@ -1,3 +1,3 @@
-export const number = (state) => {
-	return state.number
+export const posts = (state) => {
+	return state.posts
 }

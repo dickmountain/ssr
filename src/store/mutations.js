@@ -1,5 +1,5 @@
 export default {
-	increment (state) {
-		state.number++
+	setPosts (state, posts) {
+		state.posts = posts
 	}
 }

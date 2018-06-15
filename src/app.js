@@ -4,8 +4,10 @@ import { createRouter } from './router'
 import { createStore } from './store'
 
 import title from './mixins/title'
+import asyncData from './mixins/asyncData'
 
 Vue.mixin(title)
+Vue.mixin(asyncData)
 
 export function createApp ()
 {
