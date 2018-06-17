@@ -32,3 +32,7 @@
 		}
 	}
 </script>
+
+<style>
+	.posts{ background-color: paleturquoise; }
+</style>
