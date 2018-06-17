@@ -5,3 +5,9 @@ export const getPosts = ({ commit }) => {
 		commit('setPosts', response.data)
 	})
 }
+
+export const getPost = ({ commit }, id) => {
+	return axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`).then((response) => {
+		commit('setPost', response.data)
+	})
+}

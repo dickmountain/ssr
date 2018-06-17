@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import Home from '../components/Home'
 import About from '../components/About'
+import Post from '../components/Post'
 
 Vue.use(Router)
 
@@ -17,7 +18,11 @@ export function createRouter() {
 			{
 				path: '/about',
 				component: About
-			}
+			},
+			{
+				path: '/:id',
+				component: Post
+			},
 		]
 	})
 }
